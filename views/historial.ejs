@@ -1,0 +1,28 @@
+<div class="row justify-content-center">
+    <div class="col-md-10">
+        <h2 class="mb-4">Mis Aparcamientos</h2>
+
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover align-middle" id="tabla-historial">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Fecha entrada</th>
+                                <th>Fecha salida</th>
+                                <th>Ubicación</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historial-body"></tbody>
+                    </table>
+                </div>
+
+                <div id="no-data" class="alert alert-warning d-none text-center mb-0">
+                    No hay aparcamientos registrados en este dispositivo todavía.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/javascripts/historial.js"></script>
