@@ -1,8 +1,255 @@
+/* ── Variables de color ── */
+:root {
+  --color-fondo: #0f1117;
+  --color-superficie: #1a1d27;
+  --color-borde: #2a2d3e;
+  --color-acento: #4f8ef7;
+  --color-acento-hover: #3a7be0;
+  --color-exito: #2ecc71;
+  --color-texto: #e2e8f0;
+  --color-texto-suave: #8892a4;
+  --radio-borde: 12px;
+}
+
+/* ── Base ── */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   font-size: 15px;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  min-height: 100vh;
 }
 
 a {
-  color: #0d6efd;
+  color: var(--color-acento);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-acento-hover);
+}
+
+/* ── Navbar ── */
+.navbar {
+  background-color: var(--color-superficie) !important;
+  border-bottom: 1px solid var(--color-borde);
+  padding: 14px 0;
+}
+
+.navbar-brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-texto) !important;
+  letter-spacing: 0.3px;
+}
+
+.nav-link {
+  color: var(--color-texto-suave) !important;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--color-texto) !important;
+}
+
+.btn-acceso {
+  background-color: var(--color-acento);
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-acceso:hover {
+  background-color: var(--color-acento-hover);
+  color: white;
+}
+
+.texto-usuario {
+  color: var(--color-acento) !important;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.link-salir {
+  color: #e74c3c !important;
+  font-size: 0.85rem;
+}
+
+/* ── Cards ── */
+.card {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+  padding: 1.8rem;
+}
+
+/* ── Panel de info ── */
+#info-panel {
+  background-color: rgba(79, 142, 247, 0.1);
+  border: 1px solid rgba(79, 142, 247, 0.3);
+  border-radius: 10px;
+  color: var(--color-texto);
+  padding: 16px 20px;
+}
+
+#info-panel strong {
+  color: var(--color-acento);
+}
+
+.metrica-valor {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-acento);
+  line-height: 1;
+}
+
+.metrica-label {
+  font-size: 0.8rem;
+  color: var(--color-texto-suave);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Botones principales ── */
+#btn-aparcar {
+  background-color: var(--color-acento);
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+#btn-aparcar:hover {
+  background-color: var(--color-acento-hover);
+  transform: translateY(-1px);
+}
+
+#btn-retirar {
+  background-color: transparent;
+  border: 2px solid var(--color-exito);
+  border-radius: 10px;
+  color: var(--color-exito);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px;
+  transition: all 0.2s;
+}
+
+#btn-retirar:hover {
+  background-color: var(--color-exito);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* ── Mapa ── */
+#map {
+  height: 420px;
+  width: 100%;
+  border-radius: var(--radio-borde);
+  border: 1px solid var(--color-borde);
+}
+
+/* ── Tabla historial ── */
+.table {
+  color: var(--color-texto);
+  border-color: var(--color-borde);
+}
+
+.table thead th {
+  background-color: rgba(79, 142, 247, 0.15);
+  color: var(--color-texto-suave);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-color: var(--color-borde);
+  font-weight: 600;
+}
+
+.table tbody tr {
+  border-color: var(--color-borde);
+  transition: background-color 0.15s;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.table td {
+  color: var(--color-texto);
+  vertical-align: middle;
+  border-color: var(--color-borde);
+}
+
+.btn-ver-mapa {
+  background-color: transparent;
+  border: 1px solid var(--color-acento);
+  color: var(--color-acento);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  transition: all 0.2s;
+}
+
+.btn-ver-mapa:hover {
+  background-color: var(--color-acento);
+  color: white;
+}
+
+/* ── Alerta sin datos ── */
+.alerta-vacio {
+  background-color: rgba(255, 193, 7, 0.1);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  border-radius: 10px;
+  color: #ffc107;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ── Login card ── */
+.login-card {
+  max-width: 420px;
+  margin: 60px auto 0;
+}
+
+.form-control {
+  background-color: #12151f;
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  color: var(--color-texto);
+  padding: 10px 14px;
+}
+
+.form-control:focus {
+  background-color: #12151f;
+  border-color: var(--color-acento);
+  color: var(--color-texto);
+  box-shadow: 0 0 0 3px rgba(79, 142, 247, 0.2);
+}
+
+.form-label {
+  color: var(--color-texto-suave);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+/* ── Footer ── */
+footer {
+  background-color: var(--color-superficie);
+  border-top: 1px solid var(--color-borde);
+  color: var(--color-texto-suave);
+  text-align: center;
+  padding: 14px;
+  font-size: 0.8rem;
 }
