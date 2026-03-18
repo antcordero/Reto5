@@ -176,19 +176,28 @@ a:hover {
   font-weight: 600;
 }
 
+/* ── Filas de la tabla ── */
 .table tbody tr {
+  background-color: var(--color-superficie) !important;
   border-color: var(--color-borde);
-  transition: background-color 0.15s;
 }
 
 .table tbody tr:hover {
-  background-color: rgba(255, 255, 255, 0.04);
+  background-color: rgba(255, 255, 255, 0.05) !important;
 }
 
 .table td {
-  color: var(--color-texto);
+  color: var(--color-texto) !important;
   vertical-align: middle;
   border-color: var(--color-borde);
+  padding: 14px 16px;
+  font-size: 0.9rem;
+}
+
+/* ── Quitar el striped blanco de Bootstrap ── */
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: rgba(255,255,255,0.02) !important;
+  color: var(--color-texto) !important;
 }
 
 .btn-ver-mapa {
